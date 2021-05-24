@@ -5,7 +5,7 @@ export default function ClimberContainer({climbers}) {
 
     const showClimbers = (props) => {
         return props.map(prop => {
-            return <ClimberCard climber={prop}/>
+            return <ClimberCard key={prop.id} climber={prop}/>
         })
     }
     return (

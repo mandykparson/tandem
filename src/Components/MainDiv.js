@@ -26,9 +26,9 @@ export default class MainDiv extends React.Component {
             })
     }
 
-    // toggleState = (gear) => {
-    //     gear.setState({gear: true})
-    // }
+    toggleState = (gear) => {
+        gear.setState({gear: true})
+    }
     
     render() {
         return (

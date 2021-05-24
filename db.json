@@ -1,18 +1,22 @@
 {
     "climbers": [
         {
+            "id": 1,
             "name": "Lynn Hill",
             "gear": ["trad rack", "rope", "ATC"]
         },
         {
+            "id": 2,
             "name": "Alex Honnold",
             "gear": ["no shared equipment"]
         },
         {
+            "id": 3,
             "name": "Ashima Shiraishi",
             "gear": ["rope", "ATC", "quick draws"]
         },
         {
+            "id": 4,
             "name": "Adam Ondra",
             "gear": ["crash pad"]
         }
