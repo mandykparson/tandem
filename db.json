@@ -1,0 +1,43 @@
+{
+    "climbers": [
+        {
+            "name": "Lynn Hill",
+            "gear": ["trad rack", "rope", "ATC"]
+        },
+        {
+            "name": "Alex Honnold",
+            "gear": ["no shared equipment"]
+        },
+        {
+            "name": "Ashima Shiraishi",
+            "gear": ["rope", "ATC", "quick draws"]
+        },
+        {
+            "name": "Adam Ondra",
+            "gear": ["crash pad"]
+        }
+    ],
+    "areas": [
+        {
+            "location": "Sailing Hawks",
+            "type": "Bouldering",
+            "requirements": ["crash pad"]
+        },
+        {
+            "location": "Indian Creek",
+            "type": "Trad",
+            "requirements": ["rope", "ATC", "trad rack"]
+        },
+        {
+            "location": "El Capitan, Yosemite",
+            "type": "Free Solo",
+            "requirements": ["no shared equiment"]
+        },
+        {
+            "location": "Lemon Reservoir",
+            "type": "Sport",
+            "requirements": ["quick draws", "rope", "ATC"]
+        }
+    ]
+    
+}
