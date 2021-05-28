@@ -1,16 +1,16 @@
 import React from 'react'
-import ClimberCard from './ClimberCard'
+import ClimberCard from "./ClimberCard"
 
-export default function ClimberContainer({climbers}) {
-
-    const showClimbers = (props) => {
-        return props.map(prop => {
-            return <ClimberCard key={prop.id} climber={prop}/>
+export default function ClimberContainer(props) {
+    const showClimbers = () => {
+        return props.climbers.map(climber => {
+            return <ClimberCard key={climber.id} climber={climber}/>
         })
     }
     return (
-        <div>
-            <h1>{showClimbers(climbers)}</h1>
+        <div className="climberContainer">
+            <h1>Climbers</h1>
+            {showClimbers()}
         </div>
     )
 }

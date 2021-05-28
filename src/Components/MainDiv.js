@@ -1,6 +1,6 @@
 import React from 'react'
 import UserInput from "./UserInput"
-import ClimberContainer from "./ClimberContainer"
+import RenderContainer from "./renderContainer"
 
 // Gear Array in order: ATC, Rope, Trad Rack, Crash Pad, Quick Draws
 
@@ -14,26 +14,29 @@ export default class MainDiv extends React.Component {
         hasTradRack: false,
         hasCrashPad: false,
         hasQuickDraws: false,
-        userGear: []
+        userGear: []  
     }
 
     componentDidMount() {
         fetch('http://localhost:3000/climbers')
             .then(res => res.json())
-            .then(result => {
+            .then(apiClimbers => {
                 this.setState({ 
-                    climbers: result })
+                    climbers: apiClimbers})
             })
-    }
 
-    toggleState = (gear) => {
-        gear.setState({gear: true})
+        fetch('http://localhost:3000/areas')
+            .then(res => res.json())
+            .then(apiAreas => {
+                this.setState({
+                    areas: apiAreas
+                })
+            })
     }
     
     render() {
         return (
-            <div>
-                <p>Main Content</p>
+            <div className="MainContent">
                 <UserInput 
                     hasATC={this.state.hasATC} 
                     hasRope={this.state.hasRope} 
@@ -41,17 +44,8 @@ export default class MainDiv extends React.Component {
                     hasCrashPad={this.state.hasCrashPad} 
                     hasQuickDraws={this.state.hasQuickDraws}
                     />
-                <ClimberContainer climbers={this.state.climbers}/>
+                <RenderContainer climbers={this.state.climbers} areas={this.state.areas}/>
             </div>
         )
     }
 }
-
-// componentDidMount() {
-//     fetch('http://localhost:3000/areas')
-//         .then(res => res.json())
-//         .then(result => {
-//             this.setState({ 
-//                 areas: result })
-//         })
-// }

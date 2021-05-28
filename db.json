@@ -3,44 +3,70 @@
         {
             "id": 1,
             "name": "Lynn Hill",
-            "gear": ["trad rack", "rope", "ATC"]
+            "years": 20,
+            "gear": ["trad rack", "rope", "ATC"],
+            "bio": "an American rock climber. Widely regarded as one of the leading competitive sport climbers in the world during the late 1980s and early 1990s, she is famous for making the first free ascent of the difficult sheer rock face of The Nose on El Capitan in Yosemite Valley, and for repeating it the next year in less than 24 hours.", 
+            "image": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Lynn_Hill_in_Stavanger_during_world_cup_in_climbing_2015_crop.JPG"
         },
         {
             "id": 2,
             "name": "Alex Honnold",
-            "gear": ["no shared equipment"]
+            "years": 12,
+            "gear": ["no shared equipment"],
+            "bio": "Honnold is the only person to have free solo-climbed El Capitan, and holds the fastest ascent of the Yosemite triple crown, an 18-hour, 50-minute link-up of Mount Watkins, The Nose, and the Regular Northwest Face of Half Dome. Honnold says he likes tall, long routes and that he tries to do them quickly.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Alex_Honnold_01.jpg"
         },
         {
             "id": 3,
             "name": "Ashima Shiraishi",
-            "gear": ["rope", "ATC", "quick draws"]
+            "years": 15,
+            "gear": ["rope", "ATC", "quick draws"],
+            "bio": "an American rock climber. Shiraishi started climbing at the age of six at Rat Rock in Central Park, joining her father. Only a few years later, she quickly established herself as one of the top boulderers and sport climbers in the world, and was widely considered to be the best teenage climber regardless of gender.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Climbing_World_Championships_2018_Lead_Final_Shiraishi_%28BT0A2525%29-3.jpg"
         },
         {
             "id": 4,
             "name": "Adam Ondra",
-            "gear": ["crash pad"]
+            "years": 8,
+            "gear": ["crash pad"],
+            "bio": "a Czech professional rock climber, specializing in lead climbing and bouldering. Rock & Ice magazine described Ondra in 2013 as a prodigy and the leading climber of his generation.",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/20180227-LS-0055_by_Lukasz_Sokol.jpg"
+
         }
     ],
     "areas": [
         {
+            "id": 1,
             "location": "Sailing Hawks",
             "type": "Bouldering",
-            "requirements": ["crash pad"]
+            "requirements": ["crash pad"],
+            "link": "https://www.mountainproject.com/area/106393769/sailing-hawks",
+            "image": "https://cdn2.apstatic.com/photos/climb/111696820_large_1494300430.jpg" 
         },
         {
+            "id": 2,
             "location": "Indian Creek",
             "type": "Trad",
-            "requirements": ["rope", "ATC", "trad rack"]
+            "requirements": ["rope", "ATC", "trad rack"],
+            "link": "https://www.mountainproject.com/area/105716763/indian-creek",
+            "image": "https://cdn2.apstatic.com/photos/climb/114516932_large_1529874138.jpg"
         },
         {
+            "id": 3,
             "location": "El Capitan, Yosemite",
             "type": "Free Solo",
-            "requirements": ["no shared equiment"]
+            "requirements": ["no shared equiment"],
+            "link": "https://www.mountainproject.com/area/105833392/el-capitan",
+            "image": "https://cdn2.apstatic.com/photos/climb/105952604_large_1558029257.jpg"
         },
         {
+            "id": 4,
             "location": "Lemon Reservoir",
             "type": "Sport",
-            "requirements": ["quick draws", "rope", "ATC"]
+            "requirements": ["quick draws", "rope", "ATC"],
+            "link": "https://www.mountainproject.com/area/106234416/lemon-reservoir",
+            "image": "https://cdn2.apstatic.com/photos/climb/107109965_large_1494166576.jpg"
+
         }
     ]
     

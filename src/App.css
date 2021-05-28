@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+img {
+  height: auto;
+  width: 410px;
+  border-radius: 10px 10px 0px 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.renderContainer{
+  display: flex;
+  justify-content: space-around;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.climberContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.climberCard{
+  display: flex;
+  flex-direction: column;
+  width:fit-content;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+  border-radius: 10px;
+  justify-items: left;
+  margin-bottom: 2rem;
+}
+.areaCard{
+  display: flex;
+  flex-direction: column;
+  width:fit-content;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+  border-radius: 10px;
+  justify-items: left;
+  margin-bottom: 2rem;
+}
+.cardText {
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  width: 380px;
 }
+
+.gearForm {
+  margin: 0rem;
+  background-color: lavender;
+}
+
+.criteria {
+  padding: 2rem;
+}
+
+
