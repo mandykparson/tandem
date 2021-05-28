@@ -1,5 +1,5 @@
 import React from 'react'
-import UserInput from "./UserInput"
+import UserInputContainer from "./UserInputContainer"
 import RenderContainer from "./renderContainer"
 
 // Gear Array in order: ATC, Rope, Trad Rack, Crash Pad, Quick Draws
@@ -9,11 +9,13 @@ export default class MainDiv extends React.Component {
     state = {
         climbers: [],
         areas: [],
-        hasATC: false,
-        hasRope: false,
-        hasTradRack: false,
-        hasCrashPad: false,
-        hasQuickDraws: false,
+        gearList: [
+            "ATC",
+            "Rope",
+            "Trad Rack",
+            "Crash Pad",
+            "Quick Draws"
+        ],
         userGear: []  
     }
 
@@ -33,18 +35,36 @@ export default class MainDiv extends React.Component {
                 })
             })
     }
+
+    updateUserGear = (gearToAdd) => {
+        const oldGear = this.state.userGear.filter(gear => {
+            return gear !== gearToAdd
+        })
+        this.setState({
+            userGear: [...oldGear, gearToAdd]
+        })
+    }
+
+    removeUserGear = (gearToRemove) => {
+        const updatedGear = this.state.userGear.filter(gear => {
+            return gear !== gearToRemove})
+        this.setState({
+            userGear: updatedGear})
+    }
     
     render() {
         return (
             <div className="MainContent">
-                <UserInput 
-                    hasATC={this.state.hasATC} 
-                    hasRope={this.state.hasRope} 
-                    hasTradRack={this.state.hasTradRack} 
-                    hasCrashPad={this.state.hasCrashPad} 
-                    hasQuickDraws={this.state.hasQuickDraws}
-                    />
-                <RenderContainer climbers={this.state.climbers} areas={this.state.areas}/>
+                <UserInputContainer  
+                    updateUserGear={this.updateUserGear}
+                    gearList={this.state.gearList}
+                    userGear={this.state.userGear}
+                    removeUserGear={this.removeUserGear}
+                />
+                <RenderContainer 
+                    climbers={this.state.climbers} 
+                    areas={this.state.areas}
+                />
             </div>
         )
     }

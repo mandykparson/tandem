@@ -1,33 +1,21 @@
-// import React, { useState } from 'react'
+export default function UserInput(props) {
 
-export default function UserInput({userGear}) {
-    
-    // const createUserGearArray = () => {
-    //     let gearArry = []
-    //     if (input.id.gear1) {gearArry.push(input.id.gear1.value)}
-    // }
+    const generateGearList = () => {
+        return props.gearList.map(gear => {
+            return (<button 
+                        className="gear" 
+                        onClick={() => props.updateUserGear(gear)}>{gear}
+                    </button>)
+        })
+    }
+
     return (
-        <form className="gearForm">
-            <div className="criteria">
-                <label>Name: </label>
-                    <input type="text" name="name"  />
-                <br></br>
-                <label>Gear: I have... </label>
-                    <br></br>
-                    <input type="checkbox" id="gear1" name="gear1" value="ATC"/>
-                        <label for="gear1"> an ATC</label><br></br>
-                    <input type="checkbox" id="gear2" name="gear2" value="Rope"/>
-                        <label for="gear2">a rope</label><br></br>
-                    <input type="checkbox" id="gear3" name="gear3" value="Trad Rack"/>
-                        <label for="gear3"> a trad rack</label><br></br>
-                    <input type="checkbox" id="gear4" name="gear4" value="Crash Pad"/>
-                        <label for="gear3"> a crash pad</label><br></br>
-                    <input type="checkbox" id="gear5" name="gear5" value="Quick Draws"/>
-                        <label for="gear3"> some quick draws</label><br></br>
-                <input type="submit" />
+        <div className="gearForm">
+            <h2>What gear do you have? .gearForm</h2>
+            <div className="gearListButtons">
+                <p>These are .gearListButtons</p>
+                {generateGearList()}
             </div>
-            {/* controlled forms get their values from state */}
-        </form>
-    )
-    
+        </div>
+    )  
 }
