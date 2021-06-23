@@ -8,9 +8,10 @@ export default function UserGearButton(props) {
 
 
     return (
-        <div className="userGearButton">
-            <p>{props.gear}</p> 
-            <button onClick={ handleClick }>x</button>   
+        <div className="userGearFakeButton">
+            <p className="buttons">{props.gear}
+            <button className="xbutton" onClick={ handleClick }>X</button>   
+            </p>
         </div>
     )
 }

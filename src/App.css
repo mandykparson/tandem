@@ -1,30 +1,44 @@
+:root {
+  --main-color: #F2CBBD;
+  --hover-color: #733934;
+  --body-color: #A65A49;
+  --box-color: #BF785E;
+  --callout-color: #6092A6;
+}
+/* #3F40A6 */
+
+.header{
+  background-color: var(--body-color);
+  padding: 0.5rem;
+}
+h1 {
+  color: var(--main-color);
+}
+
+h2{
+  color: var(--callout-color);
+}
 img {
   height: auto;
   width: 410px;
   border-radius: 10px 10px 0px 0px;
 }
-.userInputContainer{
-  display: flex;
-  flex-direction: row;
-  height: 250px;
-}
-
 .renderContainer{
   display: flex;
   justify-content: space-around;
+  background-color: var(--main-color);
 }
 .climberContainer {
   display: flex;
   flex-direction: column;
 }
-
 .climberCard{
   display: flex;
   flex-direction: column;
   width:fit-content;
   border-style: solid;
-  border-width: 2px;
-  border-color: grey;
+  border-width: 5px;
+  border-color: var(--hover-color);
   border-radius: 10px;
   justify-items: left;
   margin-bottom: 2rem;
@@ -34,8 +48,8 @@ img {
   flex-direction: column;
   width:fit-content;
   border-style: solid;
-  border-width: 2px;
-  border-color: grey;
+  border-width: 5px;
+  border-color: var(--hover-color);
   border-radius: 10px;
   justify-items: left;
   margin-bottom: 2rem;
@@ -43,37 +57,42 @@ img {
 .cardText {
   padding: 1rem;
 }
-
 p {
   width: 380px;
 }
 
-.gearForm {
-  background-color: lavender;
-  width: 50%;
-}
-
-.userGear {
-  background-color: lavender;
-  width: 50%;
-}
-
-.gearListButtons{
+.userInput{
   display: flex;
   justify-content: space-around;
-  margin: 2rem;
-  flex-wrap: wrap;
-}
-.userGearButtons{
-  display: flex;
-  justify-content: space-around;
-  margin: 2rem;
-  flex-wrap: wrap;
-  
 }
 
-.gear{
-  background-color: rgb(0, 0, 0, 0.8);
+.gearContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  width: 45%;
+  background-color: white;
+  padding: 1rem;
+  border-style:solid;
+  border-width: 5px;
+  border-color: var(--main-color);
+  border-radius: 0px 15px 15px 15px;
+}
+
+.gearContainerHeader {
+  min-height: 100px;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+p.buttons {
+  width: auto;
+  }
+.buttons{
+  background-color: var(--callout-color);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -85,8 +104,59 @@ p {
   border-radius: 30px;
 }
 
-.criteria {
-  padding: 2rem;
+.buttons:hover {
+  background-color: var(--body-color);
 }
 
+.buttons:active {
+  transform: translateY(3px)
+}
+
+.xbutton{
+  background-color: inherit;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 0px;
+  margin-left: 10px;
+  margin-right: -12px;
+}
+
+.dropbtn{
+  background-color:var(--callout-color);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content p {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content p:hover {background-color: black;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: var(--body-color)}
 

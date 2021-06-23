@@ -7,8 +7,8 @@ export default function RenderContainer(props) {
     
     return (
         <div className="renderContainer">
+            <AreaContainer areas={props.areas} userArea={props.userArea}/>
             <ClimberContainer climbers={props.climbers}/>
-            <AreaContainer areas={props.areas}/>
         </div>
     )
 }

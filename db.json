@@ -55,7 +55,7 @@
             "id": 3,
             "location": "El Capitan, Yosemite",
             "type": "Free Solo",
-            "requirements": ["no shared equiment"],
+            "requirements": [],
             "link": "https://www.mountainproject.com/area/105833392/el-capitan",
             "image": "https://cdn2.apstatic.com/photos/climb/105952604_large_1558029257.jpg"
         },

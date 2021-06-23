@@ -2,9 +2,8 @@ import React from 'react'
 
 export default function Header() {
     return (
-        <div>
+        <div className="header">
             <h1>Tandem</h1>
-            <p>Never climb alone!</p>
         </div>
     )
 }

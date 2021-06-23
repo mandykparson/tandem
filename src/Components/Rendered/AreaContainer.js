@@ -3,7 +3,7 @@ import AreaCard from "./AreaCard"
 
 export default function AreaContainer(props) {
     const showAreas = () => {
-        return props.areas.map(area => {
+        return props.userArea.map(area => {
             return <AreaCard key={area.id} area={area}/>
         })
     }
